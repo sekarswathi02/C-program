@@ -1,0 +1,27 @@
+#include<stdio.h>
+int reverse(int);
+void main()
+{
+    int num;
+    scanf("%d",&num);
+    int sq=num*num;
+    int rev=reverse(num);
+    int sq1=rev*rev;
+    int rev1=reverse(sq1);
+    if(sq==rev1)
+    printf("Adam number");
+    else
+    printf("Not Adam");
+}
+int reverse(int num)
+{
+    int rev=0,r;
+    while(num>0)
+    {
+        r=num%10;
+        rev=rev*10+r;
+        num=num/10;
+    }
+    return rev;
+    
+    }
