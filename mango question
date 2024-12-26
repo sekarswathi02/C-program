@@ -1,0 +1,15 @@
+#include<stdio.h>
+int mango(int);
+void main()
+{
+   int n;
+   scanf("%d",&n);
+   printf("Ans:%d",mango(n));
+}
+int mango(int n)
+{
+   if(n==0)
+   return 1;
+else
+   return 2*mango(n-1);
+}
