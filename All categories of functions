@@ -1,0 +1,84 @@
+#include<stdio.h>
+
+// Function prototypes
+int add(int, int);
+int sub();
+void mult(int, int);
+void divide();
+
+int main() {
+    int option;
+
+    // Menu for operations
+    printf("Choose an operation:\n");
+    printf("1. Add\n");
+    printf("2. Sub\n");
+    printf("3. Mult\n");
+    printf("4. Division\n");
+    printf("Enter your choice: ");
+    scanf("%d", &option);
+
+    switch (option) {
+        case 1: {
+            int a, b, c;
+            printf("Enter two numbers for addition: ");
+            scanf("%d %d", &a, &b);
+            c = add(a, b);
+            printf("The result of addition is: %d\n", c);
+            break;
+        }
+        case 2: {
+            int res;
+            printf("Enter two numbers for subtraction: ");
+            res = sub();
+            printf("The result of subtraction is: %d\n", res);
+            break;
+        }
+        case 3: {
+            int x, y;
+            printf("Enter two numbers for multiplication: ");
+            scanf("%d %d", &x, &y);
+            mult(x, y);
+            break;
+        }
+        case 4:
+            divide();
+            break;
+        default:
+            printf("Invalid choice! Please select a valid operation.\n");
+    }
+
+    return 0;
+}
+
+// Function definitions
+
+// 1. Addition
+int add(int a, int b) {
+    return a + b;
+}
+
+// 2. Subtraction
+int sub() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+    return a - b;
+}
+
+// 3. Multiplication
+void mult(int x, int y) {
+    printf("The result of multiplication is: %d\n", x * y);
+}
+
+// 4. Division
+
+void divide() {
+    float a, b;
+    printf("Enter two numbers for division: ");
+    scanf("%f %f", &a, &b);
+    if (b != 0) {
+        printf("The result of division is: %.2f\n", a / b);
+    } else {
+        printf("Division by zero is not allowed.\n");
+    }
+}
