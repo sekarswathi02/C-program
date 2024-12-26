@@ -1,0 +1,11 @@
+#include <stdio.h>
+void main() 
+{
+int a;
+scanf("%d",&a);
+float f;
+scanf("%f",&f);
+char c;
+scanf(" %c",&c);
+printf("Integer=%d\nFloat=%f\nchar=%c",a,f,c);
+}
