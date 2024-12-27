@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+    int n, luckyNumber, sum = 0;
+    printf("Enter your lucky number: ");
+    scanf("%d", &luckyNumber);
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements of the array:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+        int num = arr[i];
+        while (num > 0) {
+            if (num % 10 == luckyNumber) {
+                sum += arr[i];
+                break; 
+            }
+            num /= 10; 
+        }
+    }
+    printf("Sum of numbers containing the lucky number %d: %d\n", luckyNumber, sum);
+    return 0;
+}
