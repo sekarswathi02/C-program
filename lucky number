@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+    int n, luckyDigit, count = 0;
+    printf("Enter your lucky digit: ");
+    scanf("%d", &luckyDigit);
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements of the array:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+        if (arr[i] % 10 == luckyDigit) {
+            count += 1;
+        }
+    }
+    printf("%d\n",count);
+    return 0;
+}
